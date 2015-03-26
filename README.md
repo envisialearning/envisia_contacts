@@ -8,7 +8,7 @@ API wrapper for Envisia Contacts
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'envisia_contacts', '~> 0.1.0.beta'
+gem 'envisia_contacts', '~> 0.1.0.beta', git: "https://github.com/envisialearning/envisia_contacts.git"
 ```
 
 And then execute:
