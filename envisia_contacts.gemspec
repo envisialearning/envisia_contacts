@@ -7,11 +7,11 @@ Gem::Specification.new do |spec|
   spec.name          = "envisia_contacts"
   spec.version       = EnvisiaContacts::VERSION
   spec.authors       = ["Aldwin Ibuna"]
-  spec.email         = ["aldwin@apemangroup.com"]
+  spec.email         = ["aibuna@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{API Wrapper for Envisia Contacts.}
+  # spec.description   = %q{TODO: Write a longer description or delete this line.}
+  spec.homepage      = "https://github.com/envisialearning/envisia_contacts"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
@@ -25,4 +25,5 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.8"
   spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_runtime_dependency 'her', '~> 0.7.3'
 end
