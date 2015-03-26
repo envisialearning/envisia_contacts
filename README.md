@@ -8,7 +8,7 @@ API wrapper for Envisia Contacts
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'envisia_contacts'
+gem 'envisia_contacts', '~> 0.1.0.beta'
 ```
 
 And then execute:
@@ -17,7 +17,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install envisia_contacts
+    $ gem install envisia_contacts --pre
 
 ## Usage
 
@@ -25,6 +25,7 @@ Create a file in your `config/initializers` folder named `envisia_contacts.rb` (
 
     EnvisiaContacts.configure do |c|
       c.api_key = 'api_key_here'
+      c.url = "<path to local envisialearning>" # for development environment
     end
 
 ActiveRecord methods available
