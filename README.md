@@ -30,8 +30,16 @@ Create a file in your `config/initializers` folder named `envisia_contacts.rb` (
 
 ActiveRecord methods available
     
-    # Get contaact
+    # Create
+    contact = EnvisiaContact.create( email: 'someemail@example.com', first_name: 'Some', last_name: 'Example' )
+
+    # Get
     contact = EnvisiaContact.find(contact_id)
 
-    # Create a contact
-    contact = EnvisiaContact.create( email: 'someemail@example.com', first_name: 'Some', last_name: 'Example' )
+    # Update
+    contact.email = 'newemail@somewhere.com'
+    contact.save
+
+    
+
+    
