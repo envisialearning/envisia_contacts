@@ -24,6 +24,8 @@ Gem::Specification.new do |spec|
   end
 
   spec.add_development_dependency "bundler", "~> 1.8"
+  spec.add_development_dependency "httplog", '~> 0.2.7'
   spec.add_development_dependency "rake", "~> 10.0"
+
   spec.add_runtime_dependency 'her', '~> 0.7.3'
 end

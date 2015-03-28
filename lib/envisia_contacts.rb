@@ -12,9 +12,9 @@ module EnvisiaContacts
     def configure
       yield self
 
-      self.url = "https://www.envisialearning.com" if self.url.nil?
-
       EnvisiaContacts::api.setup url: self.url do |c|
+        c.headers["Authorization"] = "Token toke=#{api_key}"
+
         # Request
         c.use Faraday::Request::UrlEncoded
 

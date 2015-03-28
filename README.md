@@ -25,7 +25,7 @@ Create a file in your `config/initializers` folder named `envisia_contacts.rb` (
 
     EnvisiaContacts.configure do |c|
       c.api_key = 'api_key_here'
-      c.url = "<path to local envisialearning>" # for development environment
+      c.url = "api_url_here"
     end
 
 ActiveRecord methods available
@@ -36,9 +36,16 @@ ActiveRecord methods available
     # Get
     contact = EnvisiaContact.find(contact_id)
 
+    # Fetch via email
+    contact = EnvisiaContact.find_by_email('someone@example.com')
+
     # Update
     contact.email = 'newemail@somewhere.com'
     contact.save
+
+    # Delete
+    contact.destroy
+
 
     
 
