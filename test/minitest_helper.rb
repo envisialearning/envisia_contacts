@@ -8,7 +8,6 @@ require 'yaml'
 CONFIG = YAML.load_file('application.yml')
 
 EnvisiaContacts.configure do |c|
-  c.api_key = '1234'
   c.api_key = CONFIG['API_KEY']
   c.url = CONFIG['SITE_URL']
 end
