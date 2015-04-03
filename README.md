@@ -46,6 +46,12 @@ ActiveRecord methods available
     # Delete
     contact.destroy
 
+    # contact_added_to_cms_project
+    contact = EnvisiaContact.contact_added_to_cms_project(guid, params)
+
+
+
+
 
     
 

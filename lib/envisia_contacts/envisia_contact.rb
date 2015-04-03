@@ -14,4 +14,8 @@ class EnvisiaContact
     EnvisiaContact.by_email(email: email)    
   end
 
+  def self.contact_added_to_cms_project(guid, params = {})
+    post "/api/v1/contacts/#{guid}/contact_added_to_cms_project", params
+  end
+
 end
