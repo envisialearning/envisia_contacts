@@ -10,12 +10,17 @@ class EnvisiaContact
 
   custom_get :by_email
 
-  def self.find_by_email(email)
-    EnvisiaContact.by_email(email: email)    
-  end
+  class << self
+    def find_by_email(email)
+      EnvisiaContact.by_email(email: email)    
+    end
 
-  def self.contact_added_to_cms_project(guid, params = {})
-    post "/api/v1/contacts/#{guid}/contact_added_to_cms_project", params
-  end
+    def contact_added_to_cms_project(guid, params = {})
+      post "/api/v1/contacts/#{guid}/contact_added_to_cms_project", params
+    end
 
+    def update_contact_lifetime_value(guid, params = {})
+      post "/api/v1/contacts/#{guid}/update_contact_lifetime_value", params
+    end
+  end
 end

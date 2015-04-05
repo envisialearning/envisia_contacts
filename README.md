@@ -49,6 +49,9 @@ ActiveRecord methods available
     # contact_added_to_cms_project
     contact = EnvisiaContact.contact_added_to_cms_project(guid, params)
 
+    # update_contact_lifetime_value
+    contact = EnvisiaContact.update_contact_lifetime_value(guid, params)
+
 
 
 
