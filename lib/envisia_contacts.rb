@@ -13,7 +13,7 @@ module EnvisiaContacts
       yield self
 
       EnvisiaContacts::api.setup url: self.url do |c|
-        c.headers["Authorization"] = "Token toke=#{api_key}"
+        c.headers["Authorization"] = "Token #{api_key}"
 
         # Request
         c.use Faraday::Request::UrlEncoded
